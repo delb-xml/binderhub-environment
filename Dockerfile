@@ -19,5 +19,7 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
+RUN pip install --user "delb[https-loader]>=0.5rc2"
+
 # copy notebook files
 COPY *.ipynb ${HOME}/
