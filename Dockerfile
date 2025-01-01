@@ -18,3 +18,6 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 USER ${USER}
+
+# copy notebook files
+COPY *.ipynb ${HOME}/
